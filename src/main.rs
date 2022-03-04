@@ -3,6 +3,7 @@
 
 use ::core::panic::PanicInfo;
 
+mod vga_buffer;
 //main fn is removed due to no use of runtime.
 //this fn is called on panic
 #[panic_handler]
@@ -10,7 +11,7 @@ fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
 
-static HELLO: &[u8] = b"Hello World!";
+static HELLO: &[u8] = b"Hello, hello World!";
 
 #[no_mangle] //don't mangle the name of this function
 pub extern "C" fn _start() -> ! {
