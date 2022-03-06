@@ -14,15 +14,14 @@ Rust only has a very minimal runtime, which takes care of some small things such
 1. Minimal freestanding Rust binary
 2. A Minimal Rust Kernel
 
-
 we create a minimal 64-bit Rust kernel for the x86 architecture. We build upon the freestanding Rust binary from the previous post to create a bootable disk image, that prints something to the screen.
-
 
 errors:
 cargo build --target x86_64-mini_os.json
 error: "/Users/hq/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/Cargo.lock" does not exist, unable to build with the standard library, try:
         rustup component add rust-src --toolchain nightly-x86_64-apple-darwin
 
-
 download qemu use: qemu-system-x86_64 -drive format=raw,file=target/x86_64-mini_os/debug/bootimage-mini_os.bin
 to start the image.
+
+after modifications to code run: "cargo bootimage" to update image then exe: 'qemu-system-x86_64 -drive format=raw,file=target/x86_64-mini_os/debug/bootimage-mini_os.bin' in terminal
