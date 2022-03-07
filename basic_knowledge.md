@@ -25,3 +25,6 @@ download qemu use: qemu-system-x86_64 -drive format=raw,file=target/x86_64-mini_
 to start the image.
 
 after modifications to code run: "cargo bootimage" to update image then exe: 'qemu-system-x86_64 -drive format=raw,file=target/x86_64-mini_os/debug/bootimage-mini_os.bin' in terminal
+
+Testing in Rust
+Rust has a built-in test framework that is capable of running unit tests without the need to set anything up. Just create a function that checks some results through assertions and add the #[test] attribute to the function header. Then cargo test will automatically find and execute all test functions of your crate.

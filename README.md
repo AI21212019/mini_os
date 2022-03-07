@@ -10,6 +10,4 @@ Review basic principles of computer science with rust programming language.
 
 ## MULTITASKING
 
-## Reference: Philipp Oppermann's blog
-
-<https://os.phil-opp.com/>
+## Reference: [Philipp Oppermann's blog](https://os.phil-opp.com/)
