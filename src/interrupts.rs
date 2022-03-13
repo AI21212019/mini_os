@@ -18,3 +18,9 @@ lazy_static! {
 pub fn init_idt() {
     IDT.load();
 }
+
+#[test_case]
+fn test_breakpoint_exception() {
+    // invoke a breakpoint exception
+    x86_64::instructions::interrupts::int3();
+}
